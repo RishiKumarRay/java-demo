@@ -67,20 +67,21 @@ pipeline{
                               script
                                {
                                  docker.withRegistry('', 'dockerhub')
-                               {
-                                image_built.push()
-                                image_built.push('latest')
-                            }
-                        }
-                    }
-                }
+                                  {
+                                    image_built.push()
+                                     image_built.push('latest')
+                                  }
+                               }
+                           }
+                 }
            }
         } 
+     }  
       post {
 
           always
-            {
+             {
                  emailext attachLog: true, body: '$DEFAULT_CONTENT', subject: '$DEFAULT_SUBJECT', to: 'rishirai.iimt@gmail.com'  
-            }
+             }
        }
    }
