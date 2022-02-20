@@ -11,7 +11,7 @@ import java.util.Map;
 @RestController
 public class HelloController {
 
-    String greeting = "Hello Rishi!";
+    String greeting = "Hello rishi!";
 
     @RequestMapping("/")
     public String index() {
