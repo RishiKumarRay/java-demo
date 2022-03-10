@@ -1,11 +1,11 @@
 name: Docker Images CI
 
 on:
-  push:
+  release:
+    types: [published]
    
-    
-   tags:
-      - 'v*.*.*'  
+    tags:
+     - 'v*.*.*'  
 jobs:
   build:
     runs-on: ubuntu-latest
