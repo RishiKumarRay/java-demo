@@ -11,4 +11,4 @@ install:
   - mvn clean install
 
 script:
-  - mvn build
+  - mvn compile
