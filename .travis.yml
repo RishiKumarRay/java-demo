@@ -8,7 +8,7 @@ branches:
 
 
 install:
-  - ./mvnw clean install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  - mvnw clean install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
 script:
-  - ./mvnw build
+  - mvnw build
