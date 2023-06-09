@@ -16,11 +16,9 @@ script:
 after_success:
   - echo "successful"
 
-# notifications:
-#   email:
-#     recipients:
-#       - rishirai760@gmail.com
-#     on_success: always
-#     on_failure: always
-
-   .
+notifications:
+  email:
+    recipients:
+      - rishirai760@gmail.com
+    on_success: always
+    on_failure: always
