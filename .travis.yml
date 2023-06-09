@@ -6,9 +6,21 @@ branches:
   only:
     - development
 
-
-install:
-  - mvn clean install
+services:
+  - docker
 
 script:
   - mvn compile
+  - docker build -t my-image
+
+after_success:
+   - echo "successful"
+
+notifications:
+  email:
+    recipients:
+      - rishirai760@gmail.com
+    on_success: always
+    on_failure: always
+
+   .
