@@ -17,6 +17,9 @@ script:
 
 after_success:
   - echo "successful"
+  - docker login -u ${username} -p ${password}
+  - docker tag  ${IMGNAME}:latest my-java:1.0
+  - docker push my-java:1.0
 
 notifications:
   email:
