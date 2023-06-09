@@ -5,13 +5,15 @@ jdk:
 branches:
   only:
     - development
+env:
+  - IMGNAME=java    
 
 services:
   - docker
 
 script:
   - mvn compile
-  - docker build -t my-image .
+  - docker build -t ${IMGNAME} .
 
 after_success:
   - echo "successful"
